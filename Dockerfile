@@ -1,5 +1,4 @@
 FROM tomcat
-RUN yum update -y
 RUN mkdir war-file
 RUN cd war-file
 #COPY .  /var/lib/jenkins/workspace/new-test/webapp/target/webapp.war
