@@ -1,9 +1,9 @@
 FROM tomcat
-RUN Yum update -y
+RUN yum update -y
 RUN mkdir war-file
 RUN cd war-file
 COPY .  /var/lib/jenkins/workspace/new-test/webapp/target/webapp.war
-ADD gameoflife.war /usr/local/tomcat/webapps 
+ADD webapp.war /usr/local/tomcat/webapps 
 CMD “catalina.sh” “run”
 EXPOSE 8080
 
