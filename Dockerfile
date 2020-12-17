@@ -2,7 +2,7 @@ FROM tomcat
 RUN yum update -y
 RUN mkdir war-file
 RUN cd war-file
-COPY .  /var/lib/jenkins/workspace/new-test/webapp/target/webapp.war
+#COPY .  /var/lib/jenkins/workspace/new-test/webapp/target/webapp.war
 ADD webapp.war /usr/local/tomcat/webapps 
 CMD “catalina.sh” “run”
 EXPOSE 8080
